@@ -1,6 +1,5 @@
 html {
   background-image: url(assets/background.png);
-  background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
@@ -16,7 +15,30 @@ body {
 
 .pin-code__container {
   margin: 100px auto;
-  max-width: 170px;
+  max-width: 220px;
+}
+
+.pin-code__cover {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #15b96c;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 999;
+}
+
+.pin-code__cover_visible {
+  display: block;
+}
+
+.pin-code__ok-caption {
+  font-size: 36px;
+  text-align: center;
+  margin: 100px auto;
 }
 
 .pin-code__output {
@@ -25,7 +47,7 @@ body {
   background-color: transparent;
   color: #fff;
   font-size: 26px;
-  width: 170px;
+  width: 220px;
   padding: 0;
   margin: 0;
   text-align: center;
@@ -40,9 +62,10 @@ body {
   margin-top: 20px;
   display: grid;
   grid-row-gap: 20px;
-  grid-column-gap: 32px;
+  grid-column-gap: 50px;
   grid-template-columns: repeat(auto-fit, 32px);
-  max-width: 170px;
+  max-width: 100%;
+  margin: 0 auto;
 }
 
 .pin-code__number {
@@ -54,8 +77,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 42px;
-  height: 42px;
+  width: 52px;
+  height: 52px;
   background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1));
   color: rgba(0, 0, 0, 0.6);
   text-shadow: 0 1px 1px rgba(255, 255, 255, 0.7);
